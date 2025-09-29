@@ -1,0 +1,62 @@
+#include<stdio.h>
+int main(){
+    int val;
+    unsigned val1;
+    long int val2;
+    long long int val3;
+    float price,price1;
+    double pi,pi1;
+    char name[20];
+    char ch;
+
+    //Integer value
+    printf("Enter Integer value:");
+    scanf("%d",&val);
+    printf("value entered is:%d\n",val);
+    
+        //unsigned int(only positive integers)
+        printf("Enter unsignedInteger value:");
+        scanf("%u",&val1);
+        printf("unsignedvalue entered is:%u\n",val1);
+        
+        //longint(larger Integer)
+        printf("Enter longint value:");
+        scanf("%ld",&val2);
+        printf(" longint value entered is:%ld\n",val2);
+
+        //long longint(very large integer)
+        printf("Enter long longint value:");
+        scanf("%lld",&val3);
+        printf(" long longint value entered is:%lld\n",val3);
+        
+    //Float datatype
+    printf("Enter float value:");
+    scanf("%f",&price);
+    printf("float  value entered is:%f\n",price);
+    
+        //2f datatype prints 2 decimal places
+        printf("Enter 2float value:");
+        scanf("%f",&price1);
+        printf("2float value entered is:%.2f\n",price1);
+     
+    //Double datatype
+    printf("Enter double value:");
+    scanf("%lf",&pi);
+    printf("double value entered is: %lf\n",pi);
+    
+        //double datatype prints upto 6 decimal places
+        printf("Enter another double value:");
+        scanf("%lf",&pi1);
+        printf("another double value entered is: %.6lf\n",pi1);
+        
+    //Single character datatype
+    printf("Enter single character  value:");
+    scanf(" %c",&ch);
+    printf("single character entered is: %c\n",ch);
+    
+        //string(char array,automatically stops at space/newline)datatype
+        printf("Enter string value:");
+        scanf("%s",name);
+        printf("string  value entered is:%s\n",name);
+     
+}
