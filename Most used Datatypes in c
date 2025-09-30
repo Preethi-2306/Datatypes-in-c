@@ -1,85 +1,85 @@
-#include<stdio.h>
-#include<stdbool.h>
-int main(){
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
     int val;
     unsigned val1;
     long int val2;
     long long int val3;
-    float price,price1;
-    double pi,pi1;
+    float price, price1;
+    double pi, pi1;
     char name[20];
     char ch;
     bool isMarried;
+    int marriedInput; 
+    
+    // To know the size of the datatype in C
+    printf("The size of int: %zu\n", sizeof(int));
+    printf("The size of char: %zu\n", sizeof(char));
+    printf("The size of float: %zu\n", sizeof(float));
+    printf("The size of double: %zu\n\n", sizeof(double));
 
-    //Integer value
-    printf("%d\n",isMarried);
-    printf("Enter Integer value:");
-    scanf("%d",&val);
-    printf("value entered is:%d\n",val);
-    
-        //unsigned int(only positive integers)
-        printf("Enter unsignedInteger value:");
-        scanf("%u",&val1);
-        printf("unsignedvalue entered is:%u\n",val1);
-        //printf("\n");
-        
-        //longint(larger Integer)
-        printf("Enter longint value:");
-        scanf("%ld",&val2);
-        printf(" longint value entered is:%ld\n",val2);
-        //printf("\n");
-        
-        //long longint(very large integer)
-        printf("Enter long longint value:");
-        scanf("%lld",&val3);
-        printf(" long longint value entered is:%lld\n",val3);
-        //printf("\n");
-        
-    //float datatype
-    printf("Enter float value:");
-    scanf("%f",&price);
-    printf("float  value entered is:%f\n",price);
-    //printf("\n");
-    
-        //2f datatype prints 2 decimal places
-        printf("Enter 2float value:");
-        scanf("%f",&price1);
-        printf("2float value entered is:%.2f\n",price1);
-        //printf("\n");
-     
-    //double datatype
-    printf("Enter double value:");
-    scanf("%lf",&pi);
-    printf("double value entered is: %lf\n",pi);
-    //printf("\n");
-    
-        //double datatype prints upto 6 decimal places
-        printf("Enter another double value:");
-        scanf("%lf",&pi1);
-        printf("another double value entered is: %.6lf\n",pi1);
-        //printf("\n");
-        
-    //single character datatype
-    printf("Enter single character  value:");
-    scanf(" %c",&ch);
-    printf("single character entered is: %c\n",ch);
-    //printf("\n");
-    
-        //string(char array,automatically stops at space/newline)datatype
-        printf("Enter string value:");
-        scanf("%s",name);
-        printf("string  value entered is:%s\n",name);
-        //printf("\n");
-    
-    //Boolean datatype
-    printf("Is he married (1-true,0-false)");
-    scanf("%d",&isMarried);
-    printf("Marital status:%d\n",isMarried);
-    if(isMarried){
-        printf("Marital status: Married\n ");
-    }else {
-        printf("Marital status:Not Married\n ");
+    // Integer valuedatatype
+    printf("Enter Integer value: ");
+    scanf("%d", &val);
+    printf("Value entered is: %d\n\n", val);
 
+        // unsigned int datatype
+        printf("Enter unsigned integer value: ");
+        scanf("%u", &val1);
+        printf("Unsigned value entered is: %u\n\n", val1);
+
+        // long int datatype
+        printf("Enter long int value: ");
+        scanf("%ld", &val2);
+        printf("Long int value entered is: %ld\n\n", val2);
+    
+        // long long int datatype
+        printf("Enter long long int value: ");
+        scanf("%lld", &val3);
+        printf("Long long int value entered is: %lld\n\n", val3);
+
+    // float datatype
+    printf("Enter float value: ");
+    scanf("%f", &price);
+    printf("Float value entered is: %f\n\n", price);
+
+        // float with 2 decimal places datatype
+        printf("Enter another float value: ");
+        scanf("%f", &price1);
+        printf("Float value (2 decimal places): %.2f\n\n", price1);
+
+    // double datatype
+    printf("Enter double value: ");
+    scanf("%lf", &pi);
+    printf("Double value entered is: %lf\n\n", pi);
+
+        // another double datatype
+        printf("Enter another double value: ");
+        scanf("%lf", &pi1);
+        printf("Another double value entered is: %.6lf\n\n", pi1);
+
+    // single character datatype
+    printf("Enter single character value: ");
+    scanf(" %c", &ch);
+    printf("Single character entered is: %c\n\n", ch);
+
+        // string datatype
+        printf("Enter string value: ");
+        scanf("%19s", name); // limit input to prevent overflow
+        printf("String value entered is: %s\n\n", name);
+
+    // boolean datatype
+    printf("Is he married? (1-true, 0-false): ");
+    scanf("%d", &marriedInput);
+    isMarried = (marriedInput != 0);
+
+    printf("Marital status: %d\n", isMarried);
+    if (isMarried) {
+        printf("Marital status: Married\n");
+    } else {
+        printf("Marital status: Not Married\n");
     }
+
     return 0;
 }
