@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+struct Point{
+    int m,n;
+};
+
 int main() {
-    int val;
+    int val,a,b;
     unsigned val1;
     long int val2;
     long long int val3;
@@ -13,7 +17,41 @@ int main() {
     bool isMarried;
     int marriedInput; 
     
-    // To know the size of the datatype in C
+    //1) Comma operator (evaluates from left to right, and returns the value of the last expression)
+    b=(a=5,a+10);
+    printf("a=%d, b=%d\n",a,b);
+        printf("\n");
+
+    //2)Conditional operator (ternary) short hand for if-else espression 1 is true we will execute espression2 else if espression 1 is false we will execute the expression3
+    int x=10,y=20;
+    int max=(x>y)?x:y;
+    printf("max=%d\n",max);
+        printf("\n");
+
+    //3)dot(.) acess member of a structure variable and arrow(->) access member of a structure through a pointer
+    
+    struct Point p1 = {10, 20};
+    struct Point *ptr = &p1;
+
+    printf("Dot: p1.m = %d, p1.n = %d\n", p1.m, p1.n);   // use dot
+    printf("Arrow: ptr->m = %d, ptr->n = %d\n", ptr->m, ptr->n); // use arrow
+    printf("\n");
+    
+    //4)Cast operator(type) converts one data type to another
+    int z=10; float k;
+    k=(float)z/4;
+    printf("k=%.2f\n",k);
+        printf("\n");
+
+    //5)Address(&) gives address of a variable  and Deference (*)accesses the value stored at an address
+    int h=50;
+    int *ptrr;
+    ptrr=&h;
+    printf("Address of h=%d\n",ptrr);
+    printf("value at ptr=%d\n",*ptrr);
+        printf("\n");
+
+    //6)Sizeof operator to know the size of the datatype in C
     printf("The size of int: %zu\n", sizeof(int));
     printf("The size of char: %zu\n", sizeof(char));
     printf("The size of float: %zu\n", sizeof(float));
