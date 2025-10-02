@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-struct Point{
-    int m,n;
-};
-
 int main() {
-    int val,a,b;
+    int val;
     unsigned val1;
     long int val2;
     long long int val3;
@@ -15,99 +11,65 @@ int main() {
     char name[20];
     char ch;
     bool isMarried;
-    int marriedInput; 
-    
-    //1) Comma operator (evaluates from left to right, and returns the value of the last expression)
-    b=(a=5,a+10);
-    printf("a=%d, b=%d\n",a,b);
-        printf("\n");
+    int marriedInput;
 
-    //2)Conditional operator (ternary) short hand for if-else espression 1 is true we will execute espression2 else if espression 1 is false we will execute the expression3
-    int x=10,y=20;
-    int max=(x>y)?x:y;
-    printf("max=%d\n",max);
-        printf("\n");
-
-    //3)dot(.) acess member of a structure variable and arrow(->) access member of a structure through a pointer
-    
-    struct Point p1 = {10, 20};
-    struct Point *ptr = &p1;
-
-    printf("Dot: p1.m = %d, p1.n = %d\n", p1.m, p1.n);   // use dot
-    printf("Arrow: ptr->m = %d, ptr->n = %d\n", ptr->m, ptr->n); // use arrow
-    printf("\n");
-    
-    //4)Cast operator(type) converts one data type to another
-    int z=10; float k;
-    k=(float)z/4;
-    printf("k=%.2f\n",k);
-        printf("\n");
-
-    //5)Address(&) gives address of a variable  and Deference (*)accesses the value stored at an address
-    int h=50;
-    int *ptrr;
-    ptrr=&h;
-    printf("Address of h=%d\n",ptrr);
-    printf("value at ptr=%d\n",*ptrr);
-        printf("\n");
-
-    //6)Sizeof operator to know the size of the datatype in C
+    // sizeof operator
     printf("The size of int: %zu\n", sizeof(int));
     printf("The size of char: %zu\n", sizeof(char));
     printf("The size of float: %zu\n", sizeof(float));
     printf("The size of double: %zu\n\n", sizeof(double));
 
-    // Integer valuedatatype
+    // Integer datatype
     printf("Enter Integer value: ");
     scanf("%d", &val);
     printf("Value entered is: %d\n\n", val);
 
-        // unsigned int datatype
-        printf("Enter unsigned integer value: ");
-        scanf("%u", &val1);
-        printf("Unsigned value entered is: %u\n\n", val1);
+    // unsigned int
+    printf("Enter unsigned integer value: ");
+    scanf("%u", &val1);
+    printf("Unsigned value entered is: %u\n\n", val1);
 
-        // long int datatype
-        printf("Enter long int value: ");
-        scanf("%ld", &val2);
-        printf("Long int value entered is: %ld\n\n", val2);
-    
-        // long long int datatype
-        printf("Enter long long int value: ");
-        scanf("%lld", &val3);
-        printf("Long long int value entered is: %lld\n\n", val3);
+    // long int
+    printf("Enter long int value: ");
+    scanf("%ld", &val2);
+    printf("Long int value entered is: %ld\n\n", val2);
 
-    // float datatype
+    // long long int
+    printf("Enter long long int value: ");
+    scanf("%lld", &val3);
+    printf("Long long int value entered is: %lld\n\n", val3);
+
+    // float
     printf("Enter float value: ");
     scanf("%f", &price);
     printf("Float value entered is: %f\n\n", price);
 
-        // float with 2 decimal places datatype
-        printf("Enter another float value: ");
-        scanf("%f", &price1);
-        printf("Float value (2 decimal places): %.2f\n\n", price1);
+    // float with 2 decimal places
+    printf("Enter another float value: ");
+    scanf("%f", &price1);
+    printf("Float value (2 decimal places): %.2f\n\n", price1);
 
-    // double datatype
+    // double
     printf("Enter double value: ");
     scanf("%lf", &pi);
     printf("Double value entered is: %lf\n\n", pi);
 
-        // another double datatype
-        printf("Enter another double value: ");
-        scanf("%lf", &pi1);
-        printf("Another double value entered is: %.6lf\n\n", pi1);
+    // another double
+    printf("Enter another double value: ");
+    scanf("%lf", &pi1);
+    printf("Another double value entered is: %.6lf\n\n", pi1);
 
-    // single character datatype
+    // char
     printf("Enter single character value: ");
     scanf(" %c", &ch);
     printf("Single character entered is: %c\n\n", ch);
 
-        // string datatype
-        printf("Enter string value: ");
-        scanf("%19s", name); // limit input to prevent overflow
-        printf("String value entered is: %s\n\n", name);
+    // string
+    printf("Enter string value: ");
+    scanf("%19s", name);
+    printf("String value entered is: %s\n\n", name);
 
-    // boolean datatype
+    // boolean
     printf("Is he married? (1-true, 0-false): ");
     scanf("%d", &marriedInput);
     isMarried = (marriedInput != 0);
